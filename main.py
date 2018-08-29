@@ -1,5 +1,6 @@
-import docker
 import os
+
+import docker
 
 docker_client = docker.DockerClient()
 
@@ -24,5 +25,6 @@ print('Tag: {0}'.format(tag))
 print('Context path: {0}'.format(context))
 print('Dockerfile path: {0}'.format(dockerfile_rel))
 
-res = docker_client.images.build(tag=tag, path=context, dockerfile=dockerfile_rel)
+res = docker_client.images.build(
+    tag=tag, path=context, dockerfile=dockerfile_rel)
 print('Successfully built image: {0}'.format(res))
