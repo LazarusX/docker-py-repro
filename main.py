@@ -5,7 +5,7 @@ docker_client = docker.DockerClient()
 
 tag = 'my-hello-world'
 context = os.path.abspath('.')
-dockerfile = os.path.abspath(os.path.join(os.path.join('folder', 'folder', 'Dockerfile')))
+dockerfile = os.path.abspath(os.path.join('folder', 'folder', 'Dockerfile'))
 
 print('Tag: {0}'.format(tag))
 print('Context path: {0}'.format(context))
